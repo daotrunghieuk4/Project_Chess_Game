@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Windows;
 
@@ -34,7 +34,7 @@ namespace ChessUI
 
             try
             {
-                string connectionString = "Data Source=DESKTOP-SBIF5O8;Initial Catalog=UserAuthentication;User ID=sa;Password=30102004;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False";
+                string connectionString = DatabaseSettings.ConnectionString;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
